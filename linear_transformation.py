@@ -1,4 +1,4 @@
-#	Scaling:
+# a.	Scaling:
 
 import cv2 as c
 import numpy as np
@@ -13,7 +13,7 @@ c.waitKey(0)
 c.destroyAllWindows()
 
 
-b.	Rotation:
+# b.	Rotation:
 import cv2 as c
 import numpy as np
 img= cv2.imread("app.jpg")
