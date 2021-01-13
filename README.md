@@ -1,32 +1,12 @@
-# 1: Program output to display grayscale image using read and write operations
+# 1: Program output to display grayscale image using read and write operations:
 
-# 1.a.	
-# Description
-In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
-
-# code
-import cv2
-img= cv2.imread("app.jpg")
-
-gray_image=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
-
-cv2.imwrite("opencv-greyscale.png",gray_image)
-
-cv2.imshow("Orignal",img)
-
-cv2.imshow("Gray_Scale",gray_image)
-
-cv2.waitKey(0)
-
-cv2.destroyAllWindows()
-# output:
 ![image](https://user-images.githubusercontent.com/72355871/104435128-074da200-55b2-11eb-8427-719c07172747.png)
 
+# 2.a. IMAGE SCALING
+# output:
 
-# 1.b. Rotation output:
-# Description
 
-To convert an image to grayscale in any of the Microsoft Office suite apps, right-click it and select Format Picture from the context menu . This will open an image editing panel on the right. Go to the Picture tab (the very last one). Expand the Picture Color options, and click the little dropdown next to the Presets for Color Saturation.
+# 2.b. Rotation:
 
 # Output
 
