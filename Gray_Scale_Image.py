@@ -1,4 +1,18 @@
-#program to display grayscale image using read and write operations
+# program to display grayscale image using read and write operations
+# Description:grayscale
+# Grayscaling is the process of converting an image from other color spaces e.g RGB, CMYK, HSV, etc. to shades of gray. It varies between complete black and complete white.
+
+#Importance of grayscaling –
+
+#Dimension reduction: For e.g. In RGB images there are three color channels and has three dimensions while grayscaled images are single dimensional. Reduces model complexity: Consider training neural article on RGB images of 10x10x3 pixel.The input layer will have 300 input nodes. On the other hand, the same neural network will need only 100 input node for grayscaled images. For other algorithms to work: There are many algorithms that are customized to work only on grayscaled images e.g. Canny edge detection function pre-implemented in OpenCV library works on Grayscaled images only.
+
+
+
+# Description: scaling
+   #When we are programming with OpenCV in Python, we often need images with specific dimensions. For example, let’s suppose that we want to resize a large image to fit on our computer screen and we need to shrink it. So, how we can do that?
+
+#We already learned that a digital image is presented in our computer by a matrix of pixels and each pixel has a specific value. So, if we want to resize our image, we just need to multiply values of our pixels with some scalar. In order to do that we just need to define coordinates of our resized image and apply function cv2.resize(). So, let’s see how it works:
+
 import cv2
 img= cv2.imread("app.jpg")
 gray_image=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
