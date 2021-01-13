@@ -5,6 +5,17 @@
 ![image](https://user-images.githubusercontent.com/72355871/104435128-074da200-55b2-11eb-8427-719c07172747.png)
 
 # 1.b. Rotation output:
+# Description
+import cv2
+img= cv2.imread("app.jpg")
+gray_image=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
+cv2.imwrite("opencv-greyscale.png",gray_image)
+cv2.imshow("Orignal",img)
+cv2.imshow("Gray_Scale",gray_image)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
+
+# Output
 
 ![image](https://user-images.githubusercontent.com/72355871/104437078-5eed0d00-55b4-11eb-96e6-3bd6163982fa.png)
 
