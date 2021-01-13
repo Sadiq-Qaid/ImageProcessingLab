@@ -31,3 +31,7 @@
 ![image](https://user-images.githubusercontent.com/72355871/104437683-1e41c380-55b5-11eb-8b14-d6fbc3fac39e.png)
 
 ![image](https://user-images.githubusercontent.com/72355871/104442904-be025000-55bb-11eb-8d1b-0914506c2e38.png)
+
+## 7: 1. '''Program output to find the neighbours of each element in the matrix.'''
+![Neighbors](https://user-images.githubusercontent.com/72355871/104512842-d5215c00-5614-11eb-8e95-a4fa92005f09.jpg)
+
