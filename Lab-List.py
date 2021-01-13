@@ -160,12 +160,12 @@ im.show()
 
 
    
-   
-   # 4 and 8 Neighburs
-import numpy as np
-axis = int(input("Enter the radius of the matrix:"))
-neighbor = int(input("Enter the 4 or 8 to calculate the neighbors"))
+ ## Develop a program to find the neighbours of each element in the matrix.
+ ## Write a program to find the sum of neighbour values in a matrix.
 
+    import numpy as np
+axis = int(input("Enter the radius of the matrix: "))
+neighbor = int(input("Enter the 4 or 8 to calculate the neighbors: "))
 if neighbor == 4 or neighbor == 8:
     x =np.empty((axis,axis))
     y = np.empty((axis+2,axis+2))
@@ -175,8 +175,11 @@ if neighbor == 4 or neighbor == 8:
     for i in range(0,axis):
         for j in range(0,axis):
             x[i][j]=int(i+j+1)
+    # Printing the Values of the Generated Matrix
+    print("Printing the Values of the Generated Matrix", end="\n")
     for i in range(0,axis):
         for j in range(0,axis):
+            pass
             print(int(x[i][j]),end = '\t')
         print('\n')
 
@@ -187,13 +190,18 @@ if neighbor == 4 or neighbor == 8:
                 y[i][j]=0
             else:
                 y[i][j]=x[i-1][j-1]
+                
+    # Printing the Values of the Matrix after padding with zeros
+    print("The Values of the Matrix after padding with zeros:", end="\n")
     for i in range(0,axis+2):
         for j in range(0,axis+2):
             print(int(y[i][j]),end = '\t')
         print('\n')
-
+    
+    print("The neighbours of each element in the matrix:", end="\n")
     for i in range(0,axis):
         for j in range(0,axis):
+            
             if neighbor == 4:                
                 s[i][j]=((y[i][j+1]+y[i+1][j]+y[i+1][j+2]+y[i+2][j+1]))
                 print(x[i][j],":",end = '\t')
@@ -205,9 +213,182 @@ if neighbor == 4 or neighbor == 8:
                     print(y[i][j],',',y[i][j+1],',',y[i][j+2],',',y[i+1][j],',',y[i+1][j+2],',',y[i+2][j],',',y[i+2][j+1],',',y[i+2][j+2])
                     #print(s[i][j],end = '\t')
         print('\n')
+        
+    print("The following matrix contains the sum of neighbour values in a matrix")
+    for i in range(0,axis):
+        for j in range(0,axis):
+            
+            if neighbor == 4:                
+                s[i][j]=((y[i][j+1]+y[i+1][j]+y[i+1][j+2]+y[i+2][j+1]))
+                print(s[i][j],end = '\t')
+            elif neighbor ==8:
+                s[i][j]=((y[i][j]+y[i][j+1]+y[i][j+2]+y[i+1][j]+y[i+1][j+2]+y[i+2][j]+y[i+2][j+1]+y[i+2][j+2]))
+                print(s[i][j],end = '\t')
+        print('\n')
 else:
      print("Wrong neighbors, you have to select ether 4 or 8")
-      
- # 2. Write a program to find the sum of neighbour values in a matrix.
-   
-  
+ 
+
+## Write a C++ program to perform operator overloading.
+
+#include "bits/stdc++.h" 
+#include <vector>
+#define rows 5
+#define cols 5 
+using namespace std; 
+int N; 
+
+class Matrix { 
+	int arr[rows][cols]; 
+public: 
+	void input(vector<vector<int> >& A); 
+	//void display() ; 
+	void operator=(Matrix x);
+	void operator+(Matrix x); 
+	void operator-(Matrix x); 
+	void operator*(Matrix x);
+	
+}; 
+
+void Matrix::input(vector<vector<int> >& A) 
+{ 
+	for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+
+			arr[i][j] = A[i][j]; 
+		} 
+	}
+ 
+} 
+
+void Matrix::operator=(Matrix x) 
+{ 
+	// Travarse the Matrix x 
+	for (int i = 0; i < rows; i++) { 
+		for (int j = 0; j < cols; j++) { 
+			arr[i][j] =  x.arr[i][j]; 
+		} 
+	}
+	
+	for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+
+			// Print the element 
+			cout << arr[i][j] << ' '; 
+		} 
+		cout << endl; 
+	} 
+	cout <<"#######################"<< endl; 
+
+} 
+
+void Matrix::operator+(Matrix x) 
+{ 
+
+	int mat [rows][cols]; 
+	for (int i = 0; i < rows; i++) { 
+		for (int j = 0; j < cols; j++) { 
+			mat[i][j] = arr[i][j]+ x.arr[i][j]; 
+		} 
+	} 
+   for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+			cout << mat[i][j] <<"\t"; 
+		} 
+		cout << endl; 
+	} 
+	cout <<"#######################"<< endl; 
+} 
+
+
+void Matrix::operator-(Matrix x) 
+{ 
+
+	int mat[rows][cols]; 
+
+
+	for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+			mat[i][j] = arr[i][j] 
+						- x.arr[i][j]; 
+		} 
+	} 
+for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+
+			cout << mat[i][j] << ' '; 
+		} 
+		cout << endl; 
+	} 
+	cout <<"#######################"<< endl; 
+
+} 
+
+
+void Matrix::operator*(Matrix x) 
+{ 
+
+	int mat[rows][cols]; 
+	for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+			mat[i][j] = 0; 
+
+			for (int k = 0; k < rows; k++) { 
+				mat[i][j] += arr[i][k] 
+							* (x.arr[k][j]); 
+			} 
+		} 
+	} 
+
+for (int i = 0; i < rows; i++) { 
+
+		for (int j = 0; j < cols; j++) { 
+
+			cout << mat[i][j] <<"\t"; 
+		} 
+		cout << endl; 
+	} 
+	cout <<"#######################"<< endl; 
+
+} 
+
+int main() 
+{ 
+
+vector<vector<int> > v1 (rows, vector<int> (cols, 0));
+vector<vector<int> > v2(rows, vector<int> (cols, 0)) ;
+	
+		for (int i = 0; i < v1.size(); i++) { 
+		
+		for (int j = 0; j < v1[i].size(); j++) { 
+			v1[i][j] = i+j+1; 
+			cout<<v1[i][j]<<" ";
+		} 
+		cout<<endl;
+
+	} 
+	
+	Matrix m1, m2; 
+	m1.input(v1); 
+	cout << "intializing Second Matrix using assignment Operator"<<endl;
+	m2 = m1;
+	cout << "Addition of two given"
+		<< " Matrices is : \n"; 
+	m1 + m2; 
+
+	cout << "Substraction of two given"
+		<< " Matrices is : \n"; 
+	m1 - m2; 
+
+	cout << "Multiplication of two"
+		<< " given Matrices is : \n"; 
+	m1* m2; 
+
+	return 0; 
+}
