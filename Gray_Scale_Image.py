@@ -1,4 +1,4 @@
-Develop a program to display grayscale image using read and write operations
+
 import cv2
 img= cv2.imread("app.jpg")
 gray_image=cv2.cvtColor(img,cv2.COLOR_BGR2GRAY)
