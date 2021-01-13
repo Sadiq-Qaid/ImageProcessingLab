@@ -35,7 +35,11 @@ c.waitKey(0)
 c.destroyAllWindows()
 
 
-# b.	Rotation:
+# b. Rotation:
+# description
+# When we perform rotation in linear algebra we always rotate along the center of the coordinate system, However, in OpenCV while processing images we can also rotate our image along arbitrary point which can be defined as an additional parameter of our function. For instance, very often this parameter can be a center of the image and it will be defined in the following way. After defining a rotation matrix M we need to call cv2.getRotationMatrix2D() function which has few arguments. The first argument is the point around which we want to rotate the image, in our case it will be the center. Finally, we can apply the rotation to our image using cv2.warpAffine()method. We need to specify our rotation matrix M and the height and the width of our output image.
+
+
 import cv2 as c
 import numpy as np
 img= cv2.imread("app.jpg")
@@ -49,6 +53,11 @@ c.destroyAllWindows()
 
 
 # program to find sum and mean of a set of images
+# Description:
+#In digital image processing, the sum of absolute differences (SAD) is a measure of the similarity between image blocks. It is calculated by taking the absolute difference between each pixel in the original block and the corresponding pixel in the block being used for comparison
+
+#Mean is most basic of all statistical measure. Means are often used in geometry and analysis; a wide range of means have been developed for these purposes. In contest of image processing filtering using mean is classified as spatial filtering and used for noise reduction.
+
 import cv2
 import os
 path='D:\images'
@@ -69,6 +78,12 @@ cv2.imshow("MEAN_OF_FOUR_IMAGES",meanImg)
 cv2.waitKey(0)
 
 # program to convert image into a binary (Black and white) colour.
+
+#Binary images are images whose pixels have only two possible intensity values. Numerically, the two values are often 0 for black, and either 1 or 255 for white. The main reason binary images are particularly useful in the field of Image Processing is because they allow easy separation of an object from the background.
+
+#In digital photography, computer-generated imagery, and colorimetry, a grayscale or image is one in which the value of each pixel is a single sample representing only an amount of light; that is, it carries only intensity information. Grayscale images, a kind of black-and-white or gray monochrome, are composed exclusively of shades of gray.
+
+
 import cv2
 img = cv2.imread('cat.jpg',2)
 ret, bw_img = cv2.threshold(img,127,255,cv2.THRESH_BINARY)
@@ -79,6 +94,9 @@ cv2.destroyAllWindows()
 
 
 # program to convert the given colour image to different colour spaces.
+#Description:
+#Color spaces are different types of color modes, used in image processing and signals and system for various purposes. The color spaces in image processing aim to facilitate the specifications of colors in some standard way. Different types of color spaces are used in multiple fields like in hardware, in multiple applications of creating animation, etc.
+
 import cv2
 image = cv2.imread('cat.jpg')
 img_HLS = cv2.cvtColor(image,cv2.COLOR_BGR2HLS)
@@ -93,6 +111,9 @@ cv2.destroyAllWindows()
 
 
 # program to create an image from 2D array (create an array of random size and density values).
+#Description:
+#For a two-dimensional array, in order to reference every element, we must use two nested loops. This gives us a counter variable for every column and every row in the matrix. int cols = 10; int rows = 10; int [] [] myArray = new int [cols] [rows]; // Two nested loops allow us to visit every spot in a 2D array Creating Arrays. You can create an array by using the new operator with the following syntax − Syntax arrayRefVar = new dataType[arraySize]; The above statement does two things − It creates an array using new dataType[arraySize]. It assigns the reference of the newly created array to the variable arrayRefVar.
+
 
 import numpy
 from PIL import Image
