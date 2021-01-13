@@ -125,11 +125,14 @@ im.save('Generated_Image.jpg')
 im.show()
 
 # Assignment:	
-   # 1. Develop a program to find the neighbours of each element in the matrix.
-   # 2. Write a program to find the sum of neighbour values in a matrix.
+   # 1. Develop a program to find the neighbours of each element in the matrix
+   # Description:
+   #In topology and related areas of mathematics, a neighbourhood (or neighborhood) is one of the basic concepts in a topological space.It is closely related to the concepts of open set and interior.Intuitively speaking, a neighbourhood of a point is a set of points containing that point where one can move some amount in any direction away from that point without leaving the set. 
 
 
-# 4 and 8 Neighburs
+   
+   
+   # 4 and 8 Neighburs
 import numpy as np
 axis = int(input("Enter the radius of the matrix:"))
 neighbor = int(input("Enter the 4 or 8 to calculate the neighbors"))
@@ -176,3 +179,6 @@ if neighbor == 4 or neighbor == 8:
 else:
      print("Wrong neighbors, you have to select ether 4 or 8")
       
+ # 2. Write a program to find the sum of neighbour values in a matrix.
+   
+  
