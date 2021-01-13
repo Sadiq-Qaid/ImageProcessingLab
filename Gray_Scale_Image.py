@@ -153,3 +153,4 @@ if neighbor == 4 or neighbor == 8:
         print('\n')
 else:
      print("Wrong neighbors, you have to select ether 4 or 8")
+      
