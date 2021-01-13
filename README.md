@@ -33,3 +33,5 @@ Assignment # 6:
 Program Output to create an image from 2D array (create an array of random size and density values).
 
 ![image](https://user-images.githubusercontent.com/72355871/104437683-1e41c380-55b5-11eb-8b14-d6fbc3fac39e.png)
+
+![image](https://user-images.githubusercontent.com/72355871/104442904-be025000-55bb-11eb-8d1b-0914506c2e38.png)
