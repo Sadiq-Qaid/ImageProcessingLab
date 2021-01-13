@@ -22,6 +22,7 @@ cv2.destroyAllWindows()
 
 #We already learned that a digital image is presented in our computer by a matrix of pixels and each pixel has a specific value. So, if we want to resize our image, we just need to multiply values of our pixels with some scalar. In order to do that we just need to define coordinates of our resized image and apply function cv2.resize(). So, let’s see how it works:
 # a. scaling
+
 import cv2 as c
 import numpy as np
 img= cv2.imread("app.jpg")
