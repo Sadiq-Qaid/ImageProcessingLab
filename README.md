@@ -32,8 +32,8 @@
 
 ![image](https://user-images.githubusercontent.com/72355871/104442904-be025000-55bb-11eb-8d1b-0914506c2e38.png)
 
-## 7.1:- [x]  Program output to find the neighbours of each element in the matrix
+## 7.1: Program output to find the neighbours of each element in the matrix
 ![Neighbors](https://user-images.githubusercontent.com/72355871/104512842-d5215c00-5614-11eb-8e95-a4fa92005f09.jpg)
 
-## 7.2:- [x]  Program output to find the sum of neighbour values in a matrix.
+## 7.2: Program output to find the sum of neighbour values in a matrix.
 ![Shot 0012](https://user-images.githubusercontent.com/72355871/104513911-6c3ae380-5616-11eb-9c22-cf6c4b0edf51.jpg)
