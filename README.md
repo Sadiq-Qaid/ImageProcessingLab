@@ -37,3 +37,4 @@
 
 ## 7.2: Program output to find the sum of neighbour values in a matrix.
 ![Shot 0012](https://user-images.githubusercontent.com/72355871/104513911-6c3ae380-5616-11eb-9c22-cf6c4b0edf51.jpg)
+ 
